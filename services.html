@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Todd Handyman Services | Myrtle Beach Handyman & Home Repairs</title>
+<meta name="description" content="Todd Handyman Services, operated by Ben Todd, provides reliable handyman services in Myrtle Beach, SC. Home repairs, carpentry, installations, and small projects done right.">
+<meta name="keywords" content="handyman myrtle beach, handyman services myrtle beach sc, home repairs myrtle beach, carpentry handyman, local handyman near me">
+<meta name="geo.region" content="US-SC">
+<meta name="geo.placename" content="Myrtle Beach">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Todd Handyman Services",
+  "founder": {"@type":"Person","name":"Ben Todd"},
+  "address": {"@type":"PostalAddress","addressLocality":"Myrtle Beach","addressRegion":"SC","addressCountry":"US"},
+  "areaServed":["Myrtle Beach SC","Surfside Beach SC","North Myrtle Beach SC","Garden City SC","Murrells Inlet SC"],
+  "serviceType":"Handyman Services"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue-main:#004aad;
+  --blue-light:#00a3f6;
+  --grey-bg:#d9d9d9;
+  --white:#ffffff;
+  --gold:#ffde59;
+}
+
+/* GLOBAL */
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Inter', sans-serif;
+  background:var(--grey-bg);
+  color:#333;
+  line-height:1.6;
+
+background-color: var(--grey-bg);
+background-image: url('http://www.transparenttextures.com/patterns/retina-wood.png');
+background-repeat: repeat;
+background-size: auto;
+}
+h1,h2,h3 {
+  font-family:'Montserrat', sans-serif;
+  color:var(--blue-main);
+}
+.container {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+}
+.accent-line {
+  width:64px;
+  height:4px;
+  background:var(--gold);
+  margin:16px auto 32px;
+}
+
+/* ================= HEADER ================= */
+header {
+  background:var(--white);
+  border-bottom:3px solid var(--blue-main);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+ box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:20px 0;
+}
+.logo {
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--blue-main);
+}
+.nav-links a {
+  margin-left:24px;
+  text-decoration:none;
+  color:var(--blue-main);
+  font-weight:600;
+}
+.nav-links a:hover { color:var(--blue-light); }
+
+.header-contact {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.header-contact a {
+  text-decoration:none;
+  font-weight:600;
+  color:var(--blue-main);
+}
+.cta-btn {
+  background:var(--gold);
+  color:var(--white);
+  padding:10px 16px;
+  border-radius:6px;
+}
+.cta-btn:hover {
+  background:var(--blue-light);
+}
+.socials a {
+  margin-left:12px;
+  font-size:20px;
+  color:var(--blue-main);
+  transition:transform .15s ease, color .15s ease;
+}
+
+.socials a:hover {
+  color:var(--blue-light);
+  transform:scale(1.15);
+}
+
+/* ================= MAIN BODY ================= */
+.main-section {
+  margin:32px 0 48px;
+}
+.main-card {
+  background:var(--white);
+  border-radius:12px;
+  padding:64px;
+  max-width:1100px;
+  margin:0 auto;
+  box-shadow:0px 24px rgba(0,0,0,0.06);
+}
+.main-card h2 {
+  text-align:center;
+  font-size:2rem;
+}
+.main-card p {
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 16px;
+}
+
+/* SERVICES */
+.services-grid {
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+
+.service-column {
+  text-align:left;
+}
+
+.service-column h3 {
+  font-size:1.3rem;
+  margin-bottom:24px;
+  color:var(--blue-main);
+}
+
+.service-column ul {
+  list-style:none;
+  padding:0;
+}
+
+.service-column li {
+  margin-bottom:16px;
+  padding-left:4px;
+}
+
+@media(max-width:768px){
+  .services-grid{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background:var(--white);
+  border-top:2px solid var(--blue-main);
+  padding:40px 0;
+  text-align:center;
+}
+footer p {
+  font-size:0.9rem;
+  color:#555;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav { flex-direction:column; align-items:flex-start; }
+  .header-contact { flex-wrap:wrap; }
+  .hero-card,.main-card { padding:40px 24px; }
+  .hero h1 { font-size:2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Todd Handyman Services, LLC</div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-contact">
+      <a href="tel:18433530335">843-353-0335</a>
+      <a href="contact.html" class="cta-btn">Get a Quote</a>
+      <div class="socials">
+      <a href="https://www.facebook.com/people/Todd-Handyman-Services/61558490675270/" target="_blank" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://www.instagram.com/todd_handyman?igsh=MTA2djBya3ViYzV5NQ%3D%3D" target="_blank" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<section class="main-section">
+  <div class="main-card">
+
+    <h2>Our Services</h2>
+    <div class="accent-line"></div>
+    <p>It begins with you. Whether you need something built, repaired, or perfected, we aim to help you achieve your goals. Ben strives to deliver top quality in all aspects of his work, from start to finish.</p>
+
+    <div class="services-grid">
+
+  <div class="service-column">
+    <h3>Handyman Services</h3>
+    <ul>
+      <li>⯁ repairs: replacing & fixing broken parts</li>
+      <li>⯁ furniture & exercise equipment assembly</li>
+      <li>⯁ furniture & fixture installation</li>
+      <li>⯁ door installation</li>
+      <li>⯁ changing door locks</li>
+      <li>⯁ drywall repair, hole patching</li>
+      <li>⯁ cabinet painting</li>
+      <li>⯁ wood staining</li>
+      <li>⯁ siding repair</li>
+      <li>⯁ painting, paint touch ups</li>
+      <li>⯁ screen repair</li>
+      <li>⯁ shelving installation</li>
+      <li>⯁ maintenance (changing out-of-reach air filters, smoke detectors, light bulbs)</li>
+    </ul>
+  </div>
+
+  <div class="service-column">
+  <h3>Carpentry / Woodworking</h3>
+    <ul>
+      <li>⯁ decks & stairs</li>
+      <li>⯁ custom closet shelving</li>
+      <li>⯁ floating shelves</li>
+      <li>⯁ cabinets and drawers</li>
+      <li>⯁ custom built-ins</li>
+      <li>⯁ interior trim / moldings</li>
+      <li>⯁ aquarium stands</li>
+      <li>⯁ wall-mounted cat tree shelves and tunnels</li>
+    </ul>
+
+    <h3 style="margin-top:32px;">Custom Projects</h3>
+    <ul>
+      <li>⯁ constructing an accessible outdoor ramp for a senior dog</li>
+      <li>⯁ crafting a handmade clock built with sectioned driftwood</li>
+      <li>⯁ building a 4-step staircase for a rehabilitation clinic</li>
+      <li>⯁ creating a basking station for a pet turtle</li>
+    </ul>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Todd Handyman Services, LLC. All rights reserved.</p>
+    <p>843-353-0335 ⯁ ben@toddhandyman.net</p>
+  </div>
+</footer>
+
+</body>
+</html>
