@@ -94,12 +94,14 @@ header {
   height: auto;
 }
 
-.carousel-fade img {
-  width: 100%;
+  .carousel-fade img {
+  width: 100%;          /* keeps it responsive */
+  max-width: 800px;     /* limits the main image size */
+  margin: 0 auto;       /* centers it in the carousel */
   border-radius: 12px;
   display: block;
   opacity: 1;
-  transition: opacity 1s ease-in-out; /* THIS CREATES THE FADE */
+  transition: opacity 1s ease-in-out; /* keeps your fade */
 }
 
 .thumb-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:16px; }
@@ -269,5 +271,6 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
