@@ -88,6 +88,20 @@ header {
 .carousel-btn.left { left:16px; }
 .carousel-btn.right { right:16px; }
 
+  .carousel-fade {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-fade img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* THIS CREATES THE FADE */
+}
+
 .thumb-grid { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:16px; }
 .thumb-grid img { width:100px; height:70px; object-fit:cover; border-radius:8px; cursor:pointer; border:2px solid transparent; transition:border .3s ease; }
 .thumb-grid img.active { border-color:var(--gold); }
@@ -136,11 +150,13 @@ footer p { font-size:0.9rem; color:#555; }
     <h2>Our Work</h2>
     <div class="accent-line"></div>
 
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left" id="prevBtn">&#8249;</button>
-      <img id="carousel" src="images/work1.jpg" alt="Ben's Work">
-      <button class="carousel-btn right" id="nextBtn">&#8250;</button>
-    </div>
+<div class="carousel-wrapper">
+  <button class="carousel-btn left" id="prevBtn">&#8249;</button>
+  <div class="carousel-fade">
+    <img id="carousel" src="custom nautical fence.jpg" alt="nautical fence">
+  </div>
+  <button class="carousel-btn right" id="nextBtn">&#8250;</button>
+</div>
 
     <div class="thumb-grid">
       <img src="custom nautical fence.jpg" alt="nautical fence" class="active">
@@ -161,13 +177,12 @@ footer p { font-size:0.9rem; color:#555; }
       <img src="kitchen renovation.jpg" alt="all new countertop, fresh cabinet paint, and new backsplash">
       <img src="custom drawers.jpg" alt="customized drawers with dividers">
       <img src="custom accent wall.jpg" alt="abstract design for a happy client">
-      <img src="catwalk and stairs.jpg" alt="catwalk and stairs for easy outside access">
+      <img src="catwalk and staircase.jpg" alt="catwalk and stairs for easy outside access">
       <img src="floating shelves.jpg" alt="floating shelves to elevate this space">
       <img src="shiplap.jpg" alt="new shiplap">
       <img src="custom built staircase.jpg" alt="custom built staircase">
       <img src="custom staircase.jpg" alt="custom staircase">
       <img src="custom cedar box.jpg" alt="cedar box with light">
-      <img src="renovated bathroom.jpg" alt="fresh paint, wainscot panel, and new fixtures">
     </div>
 
   </div>
@@ -193,23 +208,34 @@ const carouselImages = [
   'kitchen renovation.jpg',
   'custom drawers.jpg',
   'custom accent wall.jpg',
-  'catwalk and stairs.jpg',
+  'catwalk and staircase.jpg',
   'floating shelves.jpg',
   'shiplap.jpg',
   'custom built staircase.jpg',
   'custom staircase.jpg',
   'custom cedar box.jpg',
-  'renovated bathroom.jpg'
 ];
 let currentIndex = 0;
 const carouselImg = document.getElementById('carousel');
 const thumbs = document.querySelectorAll('.thumb-grid img');
 
 function showImage(index) {
-  carouselImg.src = carouselImages[index];
-  thumbs.forEach(t => t.classList.remove('active'));
-  thumbs[index].classList.add('active');
-  currentIndex = index;
+  // Fade out current image
+  carouselImg.style.opacity = 0;
+
+  setTimeout(() => {
+    // Change image src after fade out
+    carouselImg.src = carouselImages[index];
+
+    // Fade back in
+    carouselImg.style.opacity = 1;
+
+    // Update thumbnails
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[index].classList.add('active');
+
+    currentIndex = index;
+  }, 500); // half of transition duration
 }
 
 document.getElementById('prevBtn').addEventListener('click', () => {
@@ -243,4 +269,5 @@ setInterval(() => {
 
 </body>
 </html>
+
 
