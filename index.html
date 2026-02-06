@@ -259,24 +259,19 @@ footer p {
     padding: 6px 0;
   }
 
-  /* logo smaller */
+  /* logo on its own row */
+  .logo-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
   .logo {
     font-size: 1.1rem;
     text-align: center;
   }
-/* mobile only: logo on its own line */
-.logo-wrapper {
-  width: 100%;
-  text-align: center; /* change to center if you want logo centered on mobile */
-  margin-bottom: 6px; /* space below the logo */
-}
 
-/* allow header items to wrap */
-.container.nav {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-  /* nav links horizontal across mobile, wrap if needed */
+  /* nav links row */
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -290,9 +285,10 @@ footer p {
     margin: 0;
     font-size: 0.95rem;
     padding: 4px 6px;
+    text-align: center;
   }
 
-  /* header contact horizontal, wrap if needed */
+  /* contact row */
   .header-contact {
     display: flex;
     flex-direction: row;
@@ -302,17 +298,18 @@ footer p {
     margin-top: 4px;
   }
 
-  .header-contact a {
-    font-size: 0.9rem;
-  }
-
+  .header-contact a,
+  .socials a,
   .cta-btn {
-    padding: 6px 12px;
+    text-align: center;
     font-size: 0.9rem;
   }
 
-  .socials a {
-    font-size: 16px;
+  /* make container wrap and center everything */
+  .container.nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
   /* keep cards padding */
@@ -428,6 +425,7 @@ setInterval(updatePhoto, 10000);
 
 </body>
 </html>
+
 
 
 
