@@ -203,10 +203,77 @@ footer p {
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .nav { flex-direction:column; align-items:flex-start; }
-  .header-contact { flex-wrap:wrap; }
-  .hero-card,.main-card { padding:40px 24px; }
-  .hero h1 { font-size:2rem; }
+
+  /* ===== HEADER ===== */
+  header {
+    position: relative;  /* remove sticky on mobile */
+    padding: 6px 0;
+  }
+
+  /* logo on its own row */
+  .logo-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* nav links row */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin: 0;
+    font-size: 0.95rem;
+    padding: 4px 6px;
+    text-align: center;
+  }
+
+  /* contact row */
+  .header-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  .header-contact a,
+  .socials a,
+  .cta-btn {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* make container wrap and center everything */
+  .container.nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* keep cards padding */
+  .hero-card,
+  .main-card {
+    padding: 40px 24px;
+  }
+
+  /* hero text size */
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -215,7 +282,10 @@ footer p {
 
 <header>
   <div class="container nav">
-    <div class="logo">Todd Handyman Services, LLC</div>
+  <div class="logo-wrapper">
+  <div class="logo">Todd Handyman Services, LLC</div>
+</div>
+
 
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -305,3 +375,4 @@ footer p {
 </body>
 
 </html>
+
