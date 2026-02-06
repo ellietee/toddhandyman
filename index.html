@@ -252,10 +252,63 @@ footer p {
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .nav { flex-direction:column; align-items:flex-start; }
-  .header-contact { flex-wrap:wrap; }
-  .hero-card,.main-card { padding:40px 24px; }
-  .hero h1 { font-size:2rem; }
+
+  /* ===== HEADER LAYOUT (stack cleanly) ===== */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin: 0;
+    font-size: 0.95rem;
+    padding: 4px 0;
+  }
+
+  .header-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ===== SHRINK SIZES ===== */
+  header {
+    padding: 6px 0;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .header-contact a {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+
+  /* keep your card padding */
+  .hero-card,
+  .main-card {
+    padding: 40px 24px;
+  }
 }
 </style>
 </head>
@@ -356,5 +409,6 @@ setInterval(updatePhoto, 10000);
 
 </body>
 </html>
+
 
 
