@@ -264,7 +264,18 @@ footer p {
     font-size: 1.1rem;
     text-align: center;
   }
+/* mobile only: logo on its own line */
+.logo-wrapper {
+  width: 100%;
+  text-align: center; /* change to center if you want logo centered on mobile */
+  margin-bottom: 6px; /* space below the logo */
+}
 
+/* allow header items to wrap */
+.container.nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
   /* nav links horizontal across mobile, wrap if needed */
   .nav-links {
     display: flex;
@@ -323,7 +334,9 @@ footer p {
 
 <header>
   <div class="container nav">
-    <div class="logo">Todd Handyman Services, LLC</div>
+<div class="logo-wrapper">
+  <div class="logo">Todd Handyman Services, LLC</div>
+</div>
 
     <nav class="nav-links">
       <a href="services.html">Services</a>
@@ -415,6 +428,7 @@ setInterval(updatePhoto, 10000);
 
 </body>
 </html>
+
 
 
 
